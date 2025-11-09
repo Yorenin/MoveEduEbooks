@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo MoveEduBooks</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Catálogo MoveEduBooks</h1>
+        <div class="header-actions">
+            <span id="cart-icon">&#128722;</span>
+        </div>
+    </header>
+    <main>
+        <p class="promo-msg">Compre o conjunto e receba um desconto especial de 25%!</p>
+        <button id="toggle-precos" class="btn-toggle">Esconder/Mostrar Preços</button>
+        <div class="catalogo">
+            <div class="livro-card">
+                <div class="livro-imagem">
+                    <img src="livro_01.jpg" alt="Capa do livro Código Limpo">
+                </div>
+                <h3>Código Limpo</h3>
+                <p class="autor">Robert C. Martin</p>
+                <p class="preco">R$ 89,90</p>
+                <button class="btn-adicionar">Adicionar ao Carrinho</button>
+            </div>
+            <div class="livro-card">
+                <div class="livro-imagem">
+                    <img src="livro_02.jpg" alt="Capa do livro O Programador Pragmático">
+                </div>
+                <h3>O Programador Pragmático</h3>
+                <p class="autor">Hunt & Thomas</p>
+                <p class="preco">R$ 99,50</p>
+                <button class="btn-adicionar">Adicionar ao Carrinho</button>
+            </div>
+            <div class="livro-card">
+                <div class="livro-imagem">
+                    <img src="livro_03.jpg" alt="Capa do livro Padrões de Projeto">
+                </div>
+                <h3>Padrões de Projeto</h3>
+                <p class="autor">GoF</p>
+                <p class="preco">R$ 120,00</p>
+                <button class="btn-adicionar">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+    </main>
+    <aside id="carrinho-panel">
+        <div class="panel-content">
+            <button id="fechar-carrinho" class="fechar-btn">&times;</button>
+            <h3>Meu Carrinho</h3>
+            <ul id="carrinho-itens"></ul>
+            <p id="carrinho-total">Total: R$ 0,00</p>
+            <p id="desconto-msg" class="desconto-msg"></p>
+        </div>
+    </aside>
+    <footer>
+        <p>MoveEduEbooks | Contato: (17) 3214-8699 | email@moveeduebooks.com</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
