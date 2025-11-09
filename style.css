@@ -1,0 +1,198 @@
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #ffff;
+            color: #2c3e50;
+        }
+        header {
+            background: linear-gradient(90deg, #1976d2 70%, #42a5f5 100%);
+            color: #fff;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header-actions {
+            display: flex;
+            align-items: center;
+        }
+        #cart-icon {
+            cursor: pointer;
+            color: #fff;
+            font-size: 2rem;
+            transition: transform 0.3s, color 0.3s;
+            margin-left: 15px;
+        }
+        #cart-icon:hover {
+            color: #90caf9;
+            transform: scale(1.15);
+        }
+        #carrinho-panel {
+            position: fixed;
+            top: 0; right: -340px;
+            width: 340px;
+            height: 100vh;
+            background: #e3f2fd;
+            box-shadow: -4px 0 16px rgba(0,0,0,0.09);
+            z-index: 1000;
+            transition: right 0.6s cubic-bezier(.3,.7,.4,1);
+        }
+        #carrinho-panel.aberto {
+            right: 0;
+        }
+        .panel-content {
+            padding: 2rem 1rem;
+        }
+        .fechar-btn {
+            background: none;
+            color: #1976d2;
+            border: none;
+            font-size: 2rem;
+            float: right;
+            cursor: pointer;
+            margin-top: -10px;
+        }
+        .promo-msg {
+            background: #e3f2fd;
+            color: #1976d2;
+            font-weight: 600;
+            text-align: center;
+            padding: 1rem;
+            border-radius: 12px;
+            margin: 24px 0 16px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+        .promo-msg::before {
+            content: '🎁';
+            font-size: 1.2em;
+        }
+        .catalogo {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .livro-card {
+            background-color: white;
+            border: 1px solid #dde;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            width: 300px;
+            text-align: center;
+            padding: 1rem;
+            box-sizing: border-box;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-bottom: 12px;
+        }
+        .livro-card:hover {
+            transform: translateY(-6px) scale(1.03);
+            box-shadow: 0 12px 24px rgba(33,150,243,0.14);
+        }
+        .livro-imagem {
+            width: 100%;
+            height: 200px;
+            margin-bottom: 1rem;
+        }
+        .livro-imagem img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        .livro-card h3 {
+            margin-top: 0;
+            color: #222;
+        }
+        .livro-card .autor {
+            font-style: italic;
+            color: #555;
+        }
+        .livro-card .preco {
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: #1565c0;
+        }
+        .btn-adicionar {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+        }
+        .btn-adicionar:hover {
+            background-color: #218838;
+        }
+        .btn-toggle {
+            background-color: #1976d2;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 1rem;
+            transition: background-color 0.3s;
+        }
+        .btn-toggle:hover {
+            background-color: #1565c0;
+        }
+        .preco-oculto {
+            display: none;
+        }
+        .desconto-msg {
+            font-size: 1.1rem;
+            color: #388e3c;
+            background: #c8e6c9;
+            border-radius: 7px;
+            font-weight: bold;
+            padding: 8px;
+            margin-top: 18px;
+            display: none;
+            text-align: center;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #1976d2;
+            color: white;
+            margin-top: 2rem;
+        }
+        #carrinho-panel ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        #carrinho-panel li {
+            font-size: 0.98rem;
+            border-bottom: 1px solid #92b1cc;
+            padding: 6px 0;
+        }
+        #carrinho-total {
+            font-weight: bold;
+            font-size: 1.12rem;
+            margin-top: 13px;
+            color: #1565c0;
+        }
+        @media (max-width: 768px) {
+            .catalogo {
+                flex-direction: column;
+                align-items: center;
+            }
+            .livro-card {
+                width: 94vw;
+            }
+            header {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            #carrinho-panel {
+                width: 98vw;
+                right: -98vw;
+            }
+        }
